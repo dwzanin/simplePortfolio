@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>    
+    <link rel="stylesheet" href="components/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    
+</head>
+<body>
+
+    @@include('./inc/nav.html')
+
+    <div class="jumbotron header-animado"> 
+        <div class="container">
+            <p class="header-animado__title">Hello, How are you?</p>
+            <h1 class="header-animado__subtitle">I'm Silvia Silveira, Webdesigner, Front-Ender and lover of coffee!</h1>
+        </div>
+        <div class="header-animado__ilustra">
+            <div class="nuvens"></div>
+            <div class="casas"></div>
+            <div class="rua"></div>
+            <div class="carrosCima"></div>
+            <div class="carrosBaixo"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12">
+                <h2> Last Works </h2>
+            </div>
+            
+            @@loop('./inc/card-portfolio.html', [
+                {
+                    "title": "Project Title 1",
+                    "image": "imagens/portfolio/01.jpg",
+                    "text": "Little Text",
+                    "alt": "text alternative",
+                    "link": ""
+                },
+                {
+                    "title": "Project Title 2",
+                    "image": "imagens/portfolio/02.jpg",
+                    "text": "Little Text",
+                    "alt": "text alternative",
+                    "link": ""
+                    
+                },
+                {
+                    "title": "Project Title 3",
+                    "image": "imagens/portfolio/03.jpg",
+                    "text": "Little Text",
+                    "alt": "text alternative",
+                    "link": ""
+                }
+            ])
+
+        </div> <!-- row -->
+
+        <hr>
+
+    </div> <!-- container-->
+
+    @@include('./inc/footer.html')
+    
+    <script src="javascript/app.min.js"></script>
+
+</body>
+</html>

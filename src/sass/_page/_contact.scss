@@ -1,0 +1,19 @@
+%inputContact {
+    margin-bottom: 25px;   
+    transition: background .5s;
+    &:focus{
+        background: #ccc;
+    } 
+}
+
+input[type="text"],
+input[type="email"]{
+    @extend %inputContact;
+    padding: 25px 15px;
+}
+
+textarea.form-control {
+    @extend %inputContact;
+    height: 100px;
+
+}
